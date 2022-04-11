@@ -12,20 +12,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-      with:
-          persist-credentials: false
+      - uses: actions/checkout@v3
+        with:
+            persist-credentials: false
           
-    - name: Install LaTeX
+      - name: Install LaTeX
         run: |
           sudo apt-get update
           xargs sudo apt-get install < requirements-ubuntu.txt
           
       
-    - name: Build CV
-      run: make all
+      - name: Build CV
+        run: make all
       
-    - name: Upload CV as an artifact
+      - name: Upload CV as an artifact
         uses: actions/upload-artifact@v2
         with:
           name: cv
