@@ -1,0 +1,35 @@
+name: Build cv
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+          persist-credentials: false
+          
+    - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          xargs sudo apt-get install < requirements-ubuntu.txt
+          
+      
+    - name: Build CV
+      run: make all
+      
+    - name: Upload CV as an artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: cv
+          path: |
+            _output/cv.pdf
+      
+  
