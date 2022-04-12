@@ -1,4 +1,4 @@
-PROJECT=cv
+PROJECT=CV
 OUTDIR=_output
 LATEX=latexmk
 LATEX_ARGS=-xelatex -outdir=$(OUTDIR)
