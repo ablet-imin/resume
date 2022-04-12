@@ -30,6 +30,6 @@ jobs:
         with:
           name: cv
           path: |
-            _output/cv.pdf
+            _output/CV.pdf
       
   
