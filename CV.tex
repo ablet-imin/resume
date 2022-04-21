@@ -67,6 +67,15 @@
     \end{tabularx}
 }
 
+% Entries extended
+\NewEnviron{cventriesExtended}{
+    \vspace{-1em}
+    \begin{tabularx}{\textwidth}{p{0.24\textwidth} p{0.76\textwidth}}
+    \BODY
+    \end{tabularx}
+}
+
+
 \newcommand{\singleline}[2]{{#1} & {#2} \vspace{\entriespad} \\}
 \newcommand{\multiline}[3]{{#1} & {\textbf{#2} \newline {#3}} \vspace{0.6em} \\}
 
