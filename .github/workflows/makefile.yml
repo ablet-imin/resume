@@ -28,7 +28,7 @@ jobs:
         run: make all
       
       - name: Upload CV as an artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact
         with:
           name: cv
           path: |
